@@ -45,8 +45,8 @@ public class Drivetrain extends Subsystem {
     }
 
 
-	public void mecanumDrive() {
-		chassis.mecanumDrive_Cartesian(Robot.oi.driveStick.getX(), Robot.oi.driveStick.getY(), Robot.oi.driveStick.getZ(), Robot.gyro.getAngle());
+	public void mecanumDrive(double speed) {
+		chassis.mecanumDrive_Cartesian(Robot.oi.driveStick.getX()*speed, Robot.oi.driveStick.getY()*speed, Robot.oi.driveStick.getZ()*speed, Robot.gyro.getAngle());
 		
 	}
 	
@@ -54,5 +54,6 @@ public class Drivetrain extends Subsystem {
 		
 		chassis.drive(0,0);
 	}
+
 }
 

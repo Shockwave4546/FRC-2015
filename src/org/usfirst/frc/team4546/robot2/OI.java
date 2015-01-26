@@ -80,7 +80,13 @@ public class OI {
         Button operateClaw = new JoystickButton(driveStick, 1);
         Button liftUp = new JoystickButton(driveStick, 3);
         Button liftDown = new JoystickButton(driveStick, 4);
+        Button fullSpeed = new JoystickButton(driveStick, 5);
+        Button halfSpeed = new JoystickButton(driveStick, 6);
+        Button quarterSpeed = new JoystickButton(driveStick, 8);
         
+        fullSpeed.whenPressed(new FullSpeed());
+        halfSpeed.whenPressed(new HalfSpeed());
+        quarterSpeed.whenPressed(new QuarterSpeed());
         operateClaw.whenPressed(new OperateClaw());
         liftUp.whileHeld(new LiftUp());
         liftDown.whileHeld(new LiftDown());

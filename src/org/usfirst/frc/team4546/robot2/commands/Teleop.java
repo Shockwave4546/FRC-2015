@@ -40,6 +40,9 @@ public class Teleop extends CommandGroup {
     	addParallel(new LiftUp());
     	addParallel(new LiftDown());
     	addParallel(new OperateClaw());
+    	addParallel(new FullSpeed());
+    	addParallel(new HalfSpeed());
+    	addParallel(new QuarterSpeed());
     	
     }
 }
