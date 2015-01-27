@@ -13,7 +13,7 @@ public class OperateClaw extends Command	{
 	
 	protected void initialize() {
 		
-		if (Robot.claw.isOpen() == true)	{
+		if (Robot.claw.isOpen())	{
 			
 			Robot.claw.open();
 		}	else	{

@@ -47,7 +47,7 @@ public class Claw extends Subsystem {
     
     public boolean isOpen()	{
     	
-    	if (Robot.claw.solenoid.get() == true)	{
+    	if (Robot.claw.solenoid.get())	{
     		
     		return true;
     	}	else	{
