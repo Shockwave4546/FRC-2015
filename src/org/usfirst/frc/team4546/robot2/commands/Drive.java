@@ -19,7 +19,11 @@ import org.usfirst.frc.team4546.robot2.Robot;
  */
 public class  Drive extends Command {
 
-    public Drive() {
+    double driveX = 0;
+    double driveY = 0;
+    double driveZ = 0;
+    
+	public Drive() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 
@@ -34,8 +38,32 @@ public class  Drive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    
+    	if (Robot.oi.driveStick.getX() <= .55)	{
+    		
+    		driveX = 0;
+    	}	else	{
     	
-    	Robot.drivetrain.mecanumDrive(Robot.speed);
+    		driveX = Robot.oi.driveStick.getX();
+    	}
+    	
+    	if (Robot.oi.driveStick.getY() <= .55)	{
+    		
+    		driveY = 0;
+    	}	else	{
+    		
+    		driveY = Robot.oi.driveStick.getY();
+    	}
+    	
+    	if (Robot.oi.driveStick.getZ() <= .55)	{
+    		
+    		driveZ = 0;
+    	}	else	{
+    		
+    		driveZ = Robot.oi.driveStick.getZ();
+    	}
+    	
+    	Robot.drivetrain.mecanumDrive(driveX, driveY, driveZ, Robot.gyro.getAngle(), Robot.speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
