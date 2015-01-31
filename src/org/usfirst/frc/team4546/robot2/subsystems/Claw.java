@@ -36,18 +36,18 @@ public class Claw extends Subsystem {
     
     public void close()	{
     	
-    	Robot.claw.solenoid.set(true);
+    	solenoid.set(true);
     }
     
     public void open()	{
     	
-    	Robot.claw.solenoid.set(false);
+    	solenoid.set(false);
     }
     
     
     public boolean isOpen()	{
     	
-    	if (Robot.claw.solenoid.get())	{
+    	if (solenoid.get())	{
     		
     		return true;
     	}	else	{
