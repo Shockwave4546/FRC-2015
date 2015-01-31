@@ -39,7 +39,7 @@ public class  Drive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     
-    	if (Robot.oi.driveStick.getX() <= .55)	{
+    	if (Robot.oi.driveStick.getX() <= .055)	{
     		
     		driveX = 0;
     	}	else	{
@@ -47,7 +47,7 @@ public class  Drive extends Command {
     		driveX = Robot.oi.driveStick.getX();
     	}
     	
-    	if (Robot.oi.driveStick.getY() <= .55)	{
+    	if (Robot.oi.driveStick.getY() <= .055)	{
     		
     		driveY = 0;
     	}	else	{
@@ -55,7 +55,7 @@ public class  Drive extends Command {
     		driveY = Robot.oi.driveStick.getY();
     	}
     	
-    	if (Robot.oi.driveStick.getZ() <= .55)	{
+    	if (Robot.oi.driveStick.getZ() <= .055)	{
     		
     		driveZ = 0;
     	}	else	{
