@@ -9,4 +9,4 @@ BUGS
 
 TODO
 
--Update plugins; see if that resolves the wierd complaint
+-Update plugins; see if that resolves the weird complaint
