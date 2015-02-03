@@ -63,7 +63,7 @@ public class  Drive extends Command {
     		driveZ = Robot.oi.driveStick.getZ();
     	}
     	
-    	Robot.drivetrain.mecanumDrive(driveX, driveY, driveZ, Robot.gyro.getAngle(), Robot.speed);
+    	Robot.drivetrain.mecanumDrive(driveX, driveY, driveZ, Robot.speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
