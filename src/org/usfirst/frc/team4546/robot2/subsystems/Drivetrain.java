@@ -45,8 +45,8 @@ public class Drivetrain extends Subsystem {
     }
 
 
-	public void mecanumDrive(double x, double y, double z, double angle, double speed) {
-		chassis.mecanumDrive_Cartesian(x*speed, y*speed, z*speed, angle);
+	public void mecanumDrive(double x, double y, double z, double speed) {
+		chassis.mecanumDrive_Cartesian(x*speed, y*speed, z*speed, 0);
 		
 	}
 	
