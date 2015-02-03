@@ -24,4 +24,4 @@ as well as no power to bridge/pnuematics
 	
 -PDP gives an unclearable sticky fault
 	Check CAN bus order:
-		<Get Avery to put proper CAN configuration here>
+		RIO-PCM-PDP is the proper order
