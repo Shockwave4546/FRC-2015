@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.Timer;
 import org.usfirst.frc.team4546.robot2.commands.*;
 import org.usfirst.frc.team4546.robot2.subsystems.*;
 
@@ -41,6 +42,7 @@ public class Robot extends IterativeRobot {
     public static Gyro gyro;
     public static PowerDistributionPanel pdp;
     public static double speed;
+    public static Timer timer;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -56,6 +58,7 @@ public class Robot extends IterativeRobot {
         claw = new Claw();
         pdp = RobotMap.pdp;
         speed = 1;
+        timer = new Timer();
         // OI must be constructed after subsystems. If the OI creates Commands 
         //(which it very likely will), subsystems are not guaranteed to be 
         // constructed yet. Thus, their requires() statements may grab null 
