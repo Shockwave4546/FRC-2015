@@ -47,14 +47,7 @@ public class Claw extends Subsystem {
     
     public boolean isOpen()	{
     	
-    	if (solenoid.get())	{
-    		
-    		return true;
-    	}	else	{
-    		
-    		return false;
-    	}
-		
+    	return solenoid.get();
     }
     
 }
