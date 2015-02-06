@@ -25,3 +25,37 @@ as well as no power to bridge/pnuematics
 -PDP gives an unclearable sticky fault
 	Check CAN bus order:
 		RIO-PCM-PDP is the proper order
+		
+OMG NOLAN ISNT HERE WHAT DO I DO
+
+-Connect to the robot
+	Follow above steps if necessary
+	
+-Pull the latest code from github
+	Open command prompt
+	Enter "cd workspace\Arnold 2"
+	Enter "git pull"
+	Wait while it downloads the code
+
+-Compile and deploy code
+	Right click on the folder "Arnold 2" in eclipse
+		In the rightmost window "Navigator"
+		Select "Run as" then "WPILib Java deploy"
+		Wait while it compiles and downloads code (should take 15 seconds)
+			If it gives the error "assertion failed boolean test," ensure you are connected properly to the robot
+			
+-Drive the robot
+	Driver Station is located on the taskbar
+	
+CURRENT CONTTROLS
+
+A Button - Unbound
+B Button - Raises the lift while held
+X Button - Toggles the claw when pressed
+Y Button - Lowers the lift while held
+LB - Lowers the robot to half speed while held
+LT - Lowers the robot to quarter speed while held
+RB - Increments the robot speed up by 10%, up to 100%
+RT - Increments the robot speed down by 10%, down to 10%
+Left stick - Translation on the XY plane
+Right Stick - Rotation about the Z axis
