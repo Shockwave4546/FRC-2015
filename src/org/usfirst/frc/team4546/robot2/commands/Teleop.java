@@ -36,14 +36,14 @@ public class Teleop extends CommandGroup {
         // arm.
     	
     	addParallel(new Drive());
-    	//addParallel(new LiftStop());
-    	//addParallel(new LiftUp());
-    	//addParallel(new LiftDown());
-    	//addParallel(new OperateClaw());
-    	//addParallel(new FullSpeed());
-    	//addParallel(new HalfSpeed());
-    	//addParallel(new QuarterSpeed());
-    	//addParallel(new SpeedUp());
+    	addParallel(new LiftStop());
+    	addParallel(new LiftUp());
+    	addParallel(new LiftDown());
+    	addParallel(new OperateClaw());
+    	addParallel(new FullSpeed());
+    	addParallel(new HalfSpeed());
+    	addParallel(new QuarterSpeed());
+    	addParallel(new SpeedUp());
     	
     }
 }
