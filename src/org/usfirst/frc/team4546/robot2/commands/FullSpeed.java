@@ -5,9 +5,12 @@ import org.usfirst.frc.team4546.robot2.Robot;
 
 public class FullSpeed extends Command {
 
+	private boolean done = false;
+	
 	protected void initialize() {
 		
 		Robot.speed = 1;
+		done = true;
 	}
 
 	protected void execute() {
@@ -15,7 +18,7 @@ public class FullSpeed extends Command {
 	}
 
 	protected boolean isFinished() {
-		return false;
+		return done;
 	}
 
 	protected void end() {

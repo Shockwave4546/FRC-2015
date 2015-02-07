@@ -5,12 +5,16 @@ import org.usfirst.frc.team4546.robot2.Robot;
 
 public class SpeedUp extends Command {
 
+	private boolean done = false;
+	
 	protected void initialize() {
 		
-		if (Robot.speed <= .9)	{
+		if (Robot.speed < 1)	{
 			
 			Robot.speed = Robot.speed + .1;
 		}
+		
+		done = true;
 	}
 
 	protected void execute() {
@@ -18,7 +22,7 @@ public class SpeedUp extends Command {
 	}
 
 	protected boolean isFinished() {
-		return false;
+		return done;
 	}
 
 	protected void end() {
