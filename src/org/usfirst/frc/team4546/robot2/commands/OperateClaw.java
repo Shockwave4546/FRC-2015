@@ -5,6 +5,7 @@ import org.usfirst.frc.team4546.robot2.Robot;
 
 public class OperateClaw extends Command	{
 
+	private boolean done = false;
 	
 	public OperateClaw()	{
 		
@@ -20,6 +21,8 @@ public class OperateClaw extends Command	{
 			
 			Robot.claw.close();
 		}
+		
+		done = true;
 	}
 
 	
@@ -29,7 +32,7 @@ public class OperateClaw extends Command	{
 
 	
 	protected boolean isFinished() {
-		return false;
+		return done;
 	}
 
 	
