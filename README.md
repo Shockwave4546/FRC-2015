@@ -53,9 +53,9 @@ A Button - Unbound
 B Button - Raises the lift while held
 X Button - Toggles the claw when pressed
 Y Button - Lowers the lift while held
-LB - DISABLED Lowers the robot to half speed while held
-LT - DISABLED Lowers the robot to quarter speed while held
-RB - DISABLED Increments the robot speed up by 10%, up to 100%
-RT - DISABLED Increments the robot speed down by 10%, down to 10%
+LB - Lowers the robot to half speed while held
+LT - Lowers the robot to quarter speed while held
+RB - Increments the robot speed up by 10%, up to 100%
+RT - Increments the robot speed down by 10%, down to 10%
 Left stick - Translation on the XY plane
 Right Stick - Rotation about the Z axis
