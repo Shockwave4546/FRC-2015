@@ -5,7 +5,7 @@ import org.usfirst.frc.team4546.robot2.Robot;
 
 public class OperateClaw extends Command	{
 
-	private boolean done = false;
+	boolean done = false;
 	
 	public OperateClaw()	{
 		
@@ -14,7 +14,7 @@ public class OperateClaw extends Command	{
 	
 	protected void initialize() {
 		
-		if (Robot.claw.isOpen())	{
+		if(Robot.claw.isClosed())	{
 			
 			Robot.claw.open();
 		}	else	{
@@ -27,7 +27,7 @@ public class OperateClaw extends Command	{
 
 	
 	protected void execute() {
-		
+	
 	}
 
 	
