@@ -59,3 +59,18 @@ LT - Lowers the lift while held
 Trigger - Brakes the robot when pressed
 Stick - Translations and rotation
 Throttle - Speed
+
+OMG NOLAN ISNT HERE AND THERES A PROBLEM WITH SOMETHING
+
+-Need to disable auto?
+	In Drivetrain.java
+		Change the "true" in isAutoEnabled to "false"
+		
+-Need to disable a command?
+	In OI.java
+		Add two forward slashses (//) in front of the offending command/button
+
+-Need to rebind a button?
+	In OI.java
+		Remove the forward slashes in front of a button
+		Change the button you needed to rebind to the new one
