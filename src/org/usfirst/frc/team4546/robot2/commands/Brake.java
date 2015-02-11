@@ -5,17 +5,20 @@ import org.usfirst.frc.team4546.robot2.*;
 
 public class Brake extends Command {
 
+	boolean done = false;
+	
 	protected void initialize() {
 		
+		Robot.drivetrain.driveStop();
+		done = true;
 	}
 
 	protected void execute() {
 		
-		Robot.drivetrain.driveStop();
 	}
 
 	protected boolean isFinished() {
-		return false;
+		return done;
 	}
 
 	protected void end() {
