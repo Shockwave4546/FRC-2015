@@ -23,9 +23,13 @@ public class  AutonomousCommand extends CommandGroup {
 
     public AutonomousCommand() {
     
+    	//Check if auto is enabled
+    	if (Robot.drivetrain.isAutoEnabled())	{
+    		
+    		addSequential(new AutoLift());
+        	addSequential(new AutoDrive());
+    	}
     	
-    	addSequential(new AutoLift());
-    	addSequential(new AutoDrive());
     }
 
     

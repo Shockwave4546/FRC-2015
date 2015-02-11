@@ -34,31 +34,37 @@ public class Lift extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     
+    //Method to raise the lift
     public void  up()	{
     	
     	Robot.lift.motor.set(-1);
     }
     
+    //Method to lower the lift
     public void down()	{
     	
     	Robot.lift.motor.set(1);
     }
     
+    //Method to stop the lift
     public void stop()	{
     	
     	Robot.lift.motor.stopMotor();
     }
     
+    //Boolean to check if the lift is all the way up
     public boolean isFullyUp()	{
     	
     	return Robot.lift.upperLimit.get();
     }
     
+    //Boolean to check if the lift is all the way down
     public boolean isFullyDown()	{
     	
     	return Robot.lift.lowerLimit.get();
     }
     
+    //No default command
     @Override protected void initDefaultCommand() {}
 }
 

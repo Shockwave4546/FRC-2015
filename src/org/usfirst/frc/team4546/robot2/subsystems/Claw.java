@@ -31,22 +31,25 @@ public class Claw extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     
+    //Method to close the claw
     public void close()	{
     	
     	solenoid.set(true);
     }
     
+    //Method to open the claw
     public void open()	{
     	
     	solenoid.set(false);
     }
     
-    
+    //Boolean to check the status of the claw
     public boolean isClosed()	{
     	
     	return solenoid.get();
     }
     
+    //No default command
     @Override protected void initDefaultCommand()	{}
     
 }

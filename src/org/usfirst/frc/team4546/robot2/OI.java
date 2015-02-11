@@ -84,7 +84,10 @@ public class OI {
         SmartDashboard.putBoolean("Lift Fully Up", Robot.lift.isFullyUp());
         SmartDashboard.putBoolean("Lift Fully Down", Robot.lift.isFullyDown());
         
-        Button xButton = new JoystickButton(controlStick, 1);
+        
+       //Control Stick buttons
+        
+       Button xButton = new JoystickButton(controlStick, 1);
         //Button aButton = new JoystickButton(controlStick, 2);
         //Button bButton = new JoystickButton(controlStick, 3);
         //Button yButton = new JoystickButton(controlStick, 4);
@@ -97,9 +100,13 @@ public class OI {
         //Button leftStickPress = new JoystickButton(controlStick, 11);
         //Button rightStickPress = new JoystickButton(controlStick, 12);
         
+        //Control Stick commands
+        
         xButton.whenPressed(new OperateClaw());
         leftBumper.whileHeld(new LiftUp());
         leftTrigger.whileHeld(new LiftDown());
+        
+        //Drive Stick buttons
         
         Button trigger = new JoystickButton(driveStick, 1);
         //Button thumbButton = new JoystickButton(driveStick, 2);
@@ -113,6 +120,8 @@ public class OI {
         //Button tenButton = new JoystickButton(driveStick, 10);
         //Button elevenButton = new JoystickButton(driveStick, 11);
         //Button twelveButton = new JoystickButton(driveStick, 12);
+        
+        //Drive Stick commands
         
         trigger.whenPressed(new Brake());
         

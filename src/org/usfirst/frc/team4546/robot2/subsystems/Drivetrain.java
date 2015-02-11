@@ -44,15 +44,22 @@ public class Drivetrain extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
 
-
+    //Method for driving with mecanum
 	public void mecanumDrive(double x, double y, double z, double speed) {
 		chassis.mecanumDrive_Cartesian(x*speed, y*speed, z*speed, 0);
 		
 	}
 	
+	//Method for stopping the robot
 	public void driveStop()	{
 		
 		chassis.drive(0,0);
+	}
+	
+	//Make this return false to disable autonomous
+	public boolean isAutoEnabled()	{
+		
+		return true;
 	}
 
 }
