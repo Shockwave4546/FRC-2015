@@ -39,7 +39,9 @@ public class  Drive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     
-    	if (Robot.oi.driveStick.getX() <= .055 && Robot.oi.driveStick.getX() >= -.055)	{
+    	Robot.speed = Robot.oi.driveStick.getThrottle();
+    	
+    	if (Robot.oi.driveStick.getX() <= .04 && Robot.oi.driveStick.getX() >= -.04)	{
     		
     		driveX = 0;
     	}	else	{
@@ -47,7 +49,7 @@ public class  Drive extends Command {
     		driveX = Robot.oi.driveStick.getX();
     	}
     	
-    	if (Robot.oi.driveStick.getY() <= .055 && Robot.oi.driveStick.getY() >= -.055)	{
+    	if (Robot.oi.driveStick.getY() <= .04 && Robot.oi.driveStick.getY() >= -.04)	{
     		
     		driveY = 0;
     	}	else	{
@@ -55,12 +57,12 @@ public class  Drive extends Command {
     		driveY = Robot.oi.driveStick.getY();
     	}
     	
-    	if (Robot.oi.driveStick.getZ() <= .055 && Robot.oi.driveStick.getZ() >= -.055)	{
+    	if (Robot.oi.driveStick.getZ() <= .01 && Robot.oi.driveStick.getZ() >= -.01)	{
     		
     		driveZ = 0;
     	}	else	{
     		
-    		driveZ = Robot.oi.driveStick.getZ();
+    		driveZ = (Robot.oi.driveStick.getZ()/2);
     	}
     	
     	Robot.drivetrain.mecanumDrive(driveX, driveY, driveZ, Robot.speed);
