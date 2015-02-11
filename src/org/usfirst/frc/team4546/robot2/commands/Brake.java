@@ -7,6 +7,11 @@ public class Brake extends Command {
 
 	boolean done = false;
 	
+	public Brake()	{
+		
+		requires(Robot.drivetrain);
+	}
+	
 	protected void initialize() {
 		
 		Robot.drivetrain.driveStop();
