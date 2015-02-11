@@ -86,6 +86,7 @@ public class OI {
         
         
        //Control Stick buttons
+       //Uncomment any button to open it for binding
         
        Button xButton = new JoystickButton(controlStick, 1);
         //Button aButton = new JoystickButton(controlStick, 2);
@@ -101,12 +102,14 @@ public class OI {
         //Button rightStickPress = new JoystickButton(controlStick, 12);
         
         //Control Stick commands
+        //Comment any of these out to remove them
         
         xButton.whenPressed(new OperateClaw());
         leftBumper.whileHeld(new LiftUp());
         leftTrigger.whileHeld(new LiftDown());
         
         //Drive Stick buttons
+        //Uncomment any button to open it for binding
         
         Button trigger = new JoystickButton(driveStick, 1);
         //Button thumbButton = new JoystickButton(driveStick, 2);
@@ -122,6 +125,7 @@ public class OI {
         //Button twelveButton = new JoystickButton(driveStick, 12);
         
         //Drive Stick commands
+        //Comment any of these out to remove them
         
         trigger.whenPressed(new Brake());
         
