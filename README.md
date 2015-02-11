@@ -26,6 +26,9 @@ as well as no power to bridge/pnuematics
 	Check CAN bus order:
 		RIO-PCM-PDP is the proper order
 		
+-Solenoid refuses to actuate; simply "pops" when energized
+	Check that the Electric Connection Plate (the thing the power plugs in to) is the proper voltage
+		
 OMG NOLAN ISNT HERE WHAT DO I DO
 
 -Connect to the robot
