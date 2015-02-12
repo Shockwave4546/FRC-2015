@@ -40,7 +40,7 @@ public class  Drive extends Command {
     protected void execute() {
     
     	//Set the speed to the throttle from the driveStick
-    	Robot.speed = ((Robot.oi.driveStick.getThrottle() + 1) / 2);
+    	Robot.speed = -((Robot.oi.driveStick.getThrottle() + 1) / 2);
     	
     	//Check X-axis deadzone
     	if (Robot.oi.driveStick.getX() <= .04 && Robot.oi.driveStick.getX() >= -.04)	{
