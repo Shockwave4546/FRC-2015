@@ -25,20 +25,7 @@ public class AutoDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	/*if (SmartDashboard.getNumber("AutonomousDirection") == 1)	{
-    		
-    		Robot.drivetrain.mecanumDrive(0, 1, 0, 1);
-    	
-    	}	else if(SmartDashboard.getNumber("AutonomousDirection") == 2)	{
-    		
-    		Robot.drivetrain.mecanumDrive(0, -1, 0, 1);
-    		
-    	}	else	{
-    		
-    		Robot.drivetrain.mecanumDrive(-1, 0, 0, 1);
-    	}
-    	
-    	*/
+    	Robot.drivetrain.mecanumDrive(-1, 0, 0, 0);
     	
     }
 

@@ -58,10 +58,6 @@ public class Drivetrain extends Subsystem {
 	}
 	
 	//Make this return false to disable autonomous
-	public boolean isAutoEnabled()	{
-		
-		return true;
-	}
 
 }
 
