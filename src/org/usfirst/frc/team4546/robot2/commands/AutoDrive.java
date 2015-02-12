@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4546.robot2.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team4546.robot2.*;
 
@@ -18,20 +19,33 @@ public class AutoDrive extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     
-    	Robot.timer.reset();
-    	Robot.timer.start();
+    	setTimeout(2);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	Robot.drivetrain.mecanumDrive(-1, 0, 0, 1);
+    	/*if (SmartDashboard.getNumber("AutonomousDirection") == 1)	{
+    		
+    		Robot.drivetrain.mecanumDrive(0, 1, 0, 1);
+    	
+    	}	else if(SmartDashboard.getNumber("AutonomousDirection") == 2)	{
+    		
+    		Robot.drivetrain.mecanumDrive(0, -1, 0, 1);
+    		
+    	}	else	{
+    		
+    		Robot.drivetrain.mecanumDrive(-1, 0, 0, 1);
+    	}
+    	
+    	*/
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         
-    	return (Robot.timer.get() == 5);
+    	return isTimedOut();
     }
 
     // Called once after isFinished returns true

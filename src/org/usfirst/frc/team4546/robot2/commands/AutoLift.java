@@ -14,9 +14,10 @@ public class AutoLift extends Command{
 	
 	protected void initialize() {
 		
-		Robot.timer.reset();
 		Robot.claw.close();
-		Robot.timer.start();
+		Timer.delay(1);
+		setTimeout(2);
+		
 	}
 
 	protected void execute() {
@@ -26,7 +27,7 @@ public class AutoLift extends Command{
 
 	protected boolean isFinished() {
 		
-		return (Robot.lift.isFullyUp());
+		return isTimedOut();
 	}
 
 	protected void end() {
