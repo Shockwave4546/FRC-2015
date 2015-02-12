@@ -15,9 +15,11 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Timer;
+
 import org.usfirst.frc.team4546.robot2.commands.*;
 import org.usfirst.frc.team4546.robot2.subsystems.*;
 
@@ -110,6 +112,10 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("Speed %", Robot.speed*100);
+        SmartDashboard.putBoolean("Claw Status", Robot.claw.isClosed());
+        SmartDashboard.putBoolean("Lift Fully Up", Robot.lift.isFullyUp());
+        SmartDashboard.putBoolean("Lift Fully Down", Robot.lift.isFullyDown());
    
     }
 
