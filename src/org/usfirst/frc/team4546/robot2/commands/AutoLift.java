@@ -26,7 +26,7 @@ public class AutoLift extends Command{
 
 	protected boolean isFinished() {
 		
-		return (Robot.timer.get() == 3);
+		return (Robot.lift.isFullyUp());
 	}
 
 	protected void end() {
