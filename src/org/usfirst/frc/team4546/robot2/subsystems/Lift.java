@@ -37,13 +37,20 @@ public class Lift extends Subsystem {
     //Method to raise the lift
     public void  up()	{
     	
-    	Robot.lift.motor.set(-1);
+    	if (isFullyUp() == false)	{
+    		
+    		Robot.lift.motor.set(1);
+    	}
+    	
     }
     
     //Method to lower the lift
     public void down()	{
     	
-    	Robot.lift.motor.set(1);
+    	if (isFullyDown() == false)	{
+    		
+    		Robot.lift.motor.set(-1);
+    	}
     }
     
     //Method to stop the lift
