@@ -116,6 +116,10 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putBoolean("Claw Status", Robot.claw.isClosed());
         SmartDashboard.putBoolean("Lift Fully Up", Robot.lift.isFullyUp());
         SmartDashboard.putBoolean("Lift Fully Down", Robot.lift.isFullyDown());
+        
+        SmartDashboard.putData(drivetrain);
+        SmartDashboard.putData(lift);
+        SmartDashboard.putData(claw);
    
     }
 
