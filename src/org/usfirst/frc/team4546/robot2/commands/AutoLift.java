@@ -16,7 +16,6 @@ public class AutoLift extends Command{
 		
 		Robot.claw.close();
 		Timer.delay(1);
-		setTimeout(2);
 		
 	}
 
