@@ -37,6 +37,7 @@ public class AutoLift extends Command{
 	protected void interrupted() {
 		
 		Robot.lift.stop();
+		end();
 	}
 
 	
