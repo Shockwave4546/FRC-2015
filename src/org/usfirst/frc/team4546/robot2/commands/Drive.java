@@ -40,7 +40,7 @@ public class  Drive extends Command {
     protected void execute() {
     
     	//Set the speed to the throttle from the driveStick
-    	Robot.speed = -((Robot.oi.driveStick.getThrottle() + 1) / 2);
+    	Robot.speed = ((-Robot.oi.driveStick.getThrottle() + 1) / 2);
     	
     	//Check X-axis deadzone
     	if (Robot.oi.driveStick.getX() <= .04 && Robot.oi.driveStick.getX() >= -.04)	{
@@ -71,7 +71,7 @@ public class  Drive extends Command {
     	}
     	
     	//Drive the robot
-    	Robot.drivetrain.mecanumDrive(driveX, driveY, driveZ, Robot.speed);
+    	Robot.drivetrain.mecanumDrive(-driveX, -driveY, -driveZ, Robot.speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
