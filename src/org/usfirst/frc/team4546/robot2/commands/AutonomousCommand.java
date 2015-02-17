@@ -13,6 +13,7 @@ package org.usfirst.frc.team4546.robot2.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import edu.wpi.first.wpilibj.Timer;
 
 import org.usfirst.frc.team4546.robot2.Robot;
 
@@ -23,9 +24,7 @@ public class  AutonomousCommand extends CommandGroup {
 
     public AutonomousCommand() {
     
-    		
-    		addSequential(new AutoLift(), 2);
-        	addSequential(new AutoDrive(), 1);
+    	
     	
     }
 
