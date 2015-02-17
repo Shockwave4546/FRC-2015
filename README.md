@@ -62,9 +62,6 @@ Throttle - Speed
 
 OMG NOLAN ISNT HERE AND THERES A PROBLEM WITH SOMETHING
 
--Need to disable auto?
-	In Drivetrain.java
-		Change the "true" in isAutoEnabled to "false"
 		
 -Need to disable a command?
 	In OI.java
