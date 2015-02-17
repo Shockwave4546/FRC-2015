@@ -25,7 +25,7 @@ public class  AutonomousCommand extends CommandGroup {
     
     		
     		addSequential(new AutoLift(), 2);
-        	addSequential(new AutoDrive(), 2);
+        	addSequential(new AutoDrive(), 1);
     	
     }
 
