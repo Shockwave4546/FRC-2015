@@ -74,6 +74,7 @@ public class Robot extends IterativeRobot {
         autoChooser = new SendableChooser();
         autoChooser.addDefault("Straight Auto, No Ramp", new StraightAutoNoRamp());
         autoChooser.addObject("Straight Auto With Ramp", new StraightAutoWithRamp());
+        autoChooser.addObject("Stacking Auto", new StackingAuto());
         SmartDashboard.putData("Auto Chooser", autoChooser);
         // instantiate the command used for the autonomous period
         openClaw = new OpenClaw();

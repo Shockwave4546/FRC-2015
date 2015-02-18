@@ -5,12 +5,23 @@ import edu.wpi.first.wpilibj.command.Command;
 
 import org.usfirst.frc.team4546.robot2.*;
 
-public class AutoClaw extends Command{
+public class CloseClaw extends Command	{
+	
+	double closeDelay;
 
+	public CloseClaw()	{
+		
+		this(0);
+	}
+	
+	public CloseClaw(double delay)	{
+		
+		closeDelay = delay;
+	}
 	protected void initialize() {
 		
-		Timer.delay(.5);
-		Robot.claw.open();
+		Timer.delay(closeDelay);
+		Robot.claw.close();
 	}
 
 	protected void execute() {

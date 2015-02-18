@@ -16,7 +16,7 @@ public class  StraightAutoNoRamp extends CommandGroup {
     		
     		addSequential(new AutoLift(), 2);
         	addSequential(new AutoDrive(-.5), 2.75);
-        	addSequential(new AutoClaw());
+        	addSequential(new OpenClaw(.5));
     	
     }
 
