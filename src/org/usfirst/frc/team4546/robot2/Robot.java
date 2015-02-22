@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Timer;
 
 import org.usfirst.frc.team4546.robot2.commands.*;
@@ -47,6 +48,8 @@ public class Robot extends IterativeRobot {
     public static PowerDistributionPanel pdp;
     public static double speed;
     public static Timer timer;
+    public static double rampIncrement;
+    public Preferences prefs;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -62,6 +65,7 @@ public class Robot extends IterativeRobot {
         claw = new Claw();
         pdp = RobotMap.pdp;
         speed = 1;
+        rampIncrement = prefs.getDouble("Ramp Increment", .05);
         timer = new Timer();
         // OI must be constructed after subsystems. If the OI creates Commands 
         //(which it very likely will), subsystems are not guaranteed to be 
