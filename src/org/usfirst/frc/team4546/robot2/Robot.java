@@ -65,7 +65,6 @@ public class Robot extends IterativeRobot {
         claw = new Claw();
         pdp = RobotMap.pdp;
         speed = 1;
-        rampIncrement = prefs.getDouble("Ramp Increment", .05);
         timer = new Timer();
         // OI must be constructed after subsystems. If the OI creates Commands 
         //(which it very likely will), subsystems are not guaranteed to be 
@@ -117,6 +116,8 @@ public class Robot extends IterativeRobot {
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
 
+        rampIncrement = prefs.getDouble("Ramp Increment", .05);
+
     }
 
     /**
@@ -132,6 +133,8 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putData(drivetrain);
         SmartDashboard.putData(lift);
         SmartDashboard.putData(claw);
+        
+        rampIncrement = prefs.getDouble("Ramp Increment", .05);
    
     }
 

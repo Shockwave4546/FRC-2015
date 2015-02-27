@@ -71,7 +71,7 @@ public class  Drive extends Command {
     	}
     	
     	//Drive the robot
-    	Robot.drivetrain.mecanumDrive(driveX, driveY, driveZ, Robot.speed);
+    	Robot.drivetrain.mecanumDrive(Robot.drivetrain.ramp(driveX, Robot.rampIncrement),  Robot.drivetrain.ramp(driveY, Robot.rampIncrement), Robot.drivetrain.ramp(driveZ, Robot.rampIncrement), Robot.speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
