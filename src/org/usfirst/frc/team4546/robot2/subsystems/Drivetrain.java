@@ -16,6 +16,7 @@ import org.usfirst.frc.team4546.robot2.commands.*;
 import org.usfirst.frc.team4546.robot2.Robot;
 
 import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
