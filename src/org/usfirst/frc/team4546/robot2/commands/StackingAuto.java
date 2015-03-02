@@ -10,9 +10,10 @@ public class StackingAuto extends CommandGroup {
 		
 		addSequential(new CloseClaw());
 		addSequential(new LiftUp(), 2);
-		addSequential(new AutoDrive(-.25), 1);
+		addSequential(new AutoDrive(-.25), 1.25);
 		addSequential(new OpenClaw(.25));
 		addSequential(new LiftDown());
-		addSequential(new AutoStrafe(.5), 2);
+		addSequential(new CloseClaw());
+		addSequential(new AutoStrafe(-1), 2);
 	}
 }
