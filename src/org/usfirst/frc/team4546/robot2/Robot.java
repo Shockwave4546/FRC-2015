@@ -115,7 +115,7 @@ public class Robot extends IterativeRobot {
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
 
-        rampIncrement = prefs.getDouble("Ramp Increment", .05);
+        rampIncrement = prefs.getDouble("RampIncrement", .05);
 
     }
 
