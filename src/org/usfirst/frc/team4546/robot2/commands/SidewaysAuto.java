@@ -7,18 +7,11 @@ import org.usfirst.frc.team4546.robot2.*;
 
 public class SidewaysAuto extends CommandGroup {
 
-		public SidewaysAuto(String direction)	{
+		public SidewaysAuto()	{
 			
 			addSequential(new AutoLift(), 2);
-			if (direction == "Right")	{
-				
-				addSequential(new AutoTurn(1, .5), .5);
-			}	else	{
-				
-				addSequential(new AutoTurn(1, -.5),	.5);
-			}
-			
-			addSequential(new AutoDrive(-.5), 2.75);
+			addSequential(new AutoTurn(1, -.5),	2);
+			addSequential(new AutoDrive(-.5), 2.1);
 			addSequential(new OpenClaw(.5));
 		}
 }
