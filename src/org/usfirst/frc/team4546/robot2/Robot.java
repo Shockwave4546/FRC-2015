@@ -78,6 +78,8 @@ public class Robot extends IterativeRobot {
         autoChooser.addObject("Stacking Auto", new StackingAuto());
         autoChooser.addObject("Sideways Auto Left", new SidewaysAutoLeft());
         autoChooser.addObject("Sideways Auto Right", new SidewaysAutoRight());
+        autoChooser.addObject("Sideway Auto Left With Ramp", new SidewaysAutoLeftRamp());
+        autoChooser.addObject("Sideways Auto Right With Ramp", new SidewaysAutoRightRamp());
         SmartDashboard.putData("Auto Chooser", autoChooser);
     }
 
