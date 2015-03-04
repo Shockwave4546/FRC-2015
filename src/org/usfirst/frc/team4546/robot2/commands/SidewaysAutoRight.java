@@ -10,7 +10,7 @@ public class SidewaysAutoRight extends CommandGroup {
 		public SidewaysAutoRight()	{
 			
 			addSequential(new AutoLift(), 2);
-			addSequential(new AutoTurn(1, .5),	2.1);
+			addSequential(new AutoTurn(1, .5),	2);
 			addSequential(new AutoDrive(-.5), 2.2);
 			addSequential(new OpenClaw(.5));
 		}

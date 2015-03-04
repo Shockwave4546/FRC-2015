@@ -75,7 +75,7 @@ public class Robot extends IterativeRobot {
         autoChooser = new SendableChooser();
         autoChooser.addDefault("Straight Auto, No Ramp", new StraightAutoNoRamp());
         autoChooser.addObject("Straight Auto With Ramp", new StraightAutoWithRamp());
-        //autoChooser.addObject("Stacking Auto", new StackingAuto());
+        autoChooser.addObject("Stacking Auto", new StackingAuto());
         autoChooser.addObject("Sideways Auto CCW", new SidewaysAutoLeft());
         autoChooser.addObject("Sideways Auto CW", new SidewaysAutoRight());
         autoChooser.addObject("Sideway Auto Left With Ramp", new SidewaysAutoLeftRamp());
