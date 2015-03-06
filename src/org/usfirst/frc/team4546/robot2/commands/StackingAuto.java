@@ -8,6 +8,7 @@ public class StackingAuto extends CommandGroup {
 
 	public StackingAuto()	{
 		
+		addSequential(new LiftDown());
 		addSequential(new CloseClaw());
 		addSequential(new LiftUp(), 2);
 		addSequential(new AutoDrive(-.25), 1.55);

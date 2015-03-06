@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Timer;
 
@@ -44,6 +45,7 @@ public class Robot extends IterativeRobot {
     public static Claw claw;
     public static Gyro gyro;
     public static PowerDistributionPanel pdp;
+    public static Compressor compressor;
     public static double speed;
     public static Timer timer;
     public static double rampIncrement;
@@ -62,6 +64,7 @@ public class Robot extends IterativeRobot {
         gyro = RobotMap.gyro;
         claw = new Claw();
         pdp = RobotMap.pdp;
+        compressor = RobotMap.compressor;
         speed = 1;
         timer = new Timer();
         // OI must be constructed after subsystems. If the OI creates Commands 
@@ -73,13 +76,14 @@ public class Robot extends IterativeRobot {
         gyro.initGyro();
 
         autoChooser = new SendableChooser();
-        autoChooser.addDefault("Straight Auto, No Ramp", new StraightAutoNoRamp());
+        autoChooser.addDefault("No Auto", null);
         autoChooser.addObject("Straight Auto With Ramp", new StraightAutoWithRamp());
+        autoChooser.addObject("Straight Auto, No Ramp", new StraightAutoNoRamp());
         autoChooser.addObject("Stacking Auto", new StackingAuto());
         autoChooser.addObject("Sideways Auto CCW", new SidewaysAutoLeft());
         autoChooser.addObject("Sideways Auto CW", new SidewaysAutoRight());
-        autoChooser.addObject("Sideway Auto Left With Ramp", new SidewaysAutoLeftRamp());
-        autoChooser.addObject("Sideways Auto Right With Ramp", new SidewaysAutoRightRamp());
+        autoChooser.addObject("Sideway Auto CCW With Ramp", new SidewaysAutoLeftRamp());
+        autoChooser.addObject("Sideways Auto CW With Ramp", new SidewaysAutoRightRamp());
         SmartDashboard.putData("Auto Chooser", autoChooser);
     }
 
