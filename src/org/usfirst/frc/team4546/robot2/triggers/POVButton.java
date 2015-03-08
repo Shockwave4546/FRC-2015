@@ -21,6 +21,9 @@ public class POVButton extends Trigger	{
 		if (joystick.getPOV(POV) == degrees)	{
 			
 			value = true;
+		}	else	{
+			
+			value = false;
 		}
 		
 		return value;
