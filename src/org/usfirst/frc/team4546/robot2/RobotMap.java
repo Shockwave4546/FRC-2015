@@ -33,6 +33,7 @@ public class RobotMap {
     public static Solenoid clawSolenoid;
     public static DigitalInput liftUpperLimit;
     public static DigitalInput liftLowerLimit;
+    public static DigitalInput liftToteLimit;
     public static PowerDistributionPanel pdp;
 
     public static void init() {
@@ -72,6 +73,9 @@ public class RobotMap {
         
         liftLowerLimit = new DigitalInput(1);
         LiveWindow.addSensor("Lift", "Lift Lower Limit", (DigitalInput) liftLowerLimit);
+        
+        liftToteLimit = new DigitalInput(2);
+        LiveWindow.addSensor("Lift", "Lift Tote Limit", (DigitalInput) liftToteLimit);
         
         //Claw
         clawSolenoid = new Solenoid(0, 0);
