@@ -9,9 +9,10 @@ public class SidewaysAutoRightRamp extends CommandGroup {
 
 		public SidewaysAutoRightRamp()	{
 			
+			addSequential(new LiftDown());
 			addSequential(new AutoLift(), 2);
 			addSequential(new AutoTurn(1, .5),	2);
-			addSequential(new AutoDrive(-.7), 2.5);
+			addSequential(new AutoDrive(-.7), 2);
 			addSequential(new OpenClaw(.5));
 		}
 }

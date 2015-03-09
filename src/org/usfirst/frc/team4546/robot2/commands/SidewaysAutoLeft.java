@@ -9,6 +9,7 @@ public class SidewaysAutoLeft extends CommandGroup {
 
 		public SidewaysAutoLeft()	{
 			
+			addSequential(new LiftDown());
 			addSequential(new AutoLift(), 2);
 			addSequential(new AutoTurn(1, -.5),	2);
 			addSequential(new AutoDrive(-.5), 2.1);
