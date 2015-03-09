@@ -7,12 +7,11 @@ public class POVButton extends Trigger	{
 
 	private Joystick joystick;
 	private int POV, degrees;
-	private boolean value;
 	
-	public POVButton(Joystick joystick, int POV, int degrees)	{
+	public POVButton(Joystick joystick, int pov, int degrees)	{
 		
 		this.joystick = joystick;
-		this.POV = POV;
+		this.POV = pov;
 		this.degrees = degrees;
 	}
 	
@@ -20,13 +19,12 @@ public class POVButton extends Trigger	{
 
 		if (joystick.getPOV(POV) == degrees)	{
 			
-			value = true;
+			return true;
 		}	else	{
 			
-			value = false;
+			return false;
 		}
 		
-		return value;
 	}
 
 }
