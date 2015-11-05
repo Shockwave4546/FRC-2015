@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry including="org/usfirst/frc/team4546/robot2/" kind="src" path="src"/>
-	<classpathentry kind="var" path="wpilib" sourcepath="wpilib.sources"/>
-	<classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="var" path="wpilib" sourcepath="wpilib.sources"/>
+	<classpathentry exported="true" kind="var" path="networktables" sourcepath="networktables.sources"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/dover/navx-mxp/java/lib/navx_frc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
