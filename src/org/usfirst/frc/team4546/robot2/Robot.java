@@ -11,13 +11,14 @@
 
 package org.usfirst.frc.team4546.robot2;
 
+import com.kauailabs.navx.frc.AHRS;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Timer;
@@ -42,6 +43,8 @@ public class Robot extends IterativeRobot {
     public static Lift lift;
     public static Claw claw;
     public static PowerDistributionPanel pdp;
+    public AHRS gyro;
+    
     public Preferences prefs;
     
     public static double speed;
@@ -56,6 +59,7 @@ public class Robot extends IterativeRobot {
         lift = new Lift();
         claw = new Claw();
         pdp = RobotMap.pdp;
+        gyro = RobotMap.gyro;
         speed = 1;
         // OI must be constructed after subsystems. If the OI creates Commands 
         //(which it very likely will), subsystems are not guaranteed to be 

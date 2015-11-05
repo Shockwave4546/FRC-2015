@@ -13,6 +13,8 @@ package org.usfirst.frc.team4546.robot2;
     
 import edu.wpi.first.wpilibj.*;
 
+import com.kauailabs.navx.frc.AHRS;
+
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import java.util.Vector;
 
@@ -35,6 +37,7 @@ public class RobotMap {
     public static DigitalInput liftLowerLimit;
     public static DigitalInput liftToteLimit;
     public static PowerDistributionPanel pdp;
+    public static AHRS gyro;
 
     public static void init() {
 
