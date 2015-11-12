@@ -74,9 +74,9 @@ public class OI {
         //Button bButton = new JoystickButton(controlStick, 3);
         //Button yButton = new JoystickButton(controlStick, 4);
         Button leftBumper= new JoystickButton(controlStick, 5);
-        //Button rightBumper = new JoystickButton(controlStick, 6);
+        Button rightBumper = new JoystickButton(controlStick, 6);
         Button leftTrigger = new JoystickButton(controlStick, 7);
-        //Button rightTrigger = new JoystickButton(controlStick, 8);
+        Button rightTrigger = new JoystickButton(controlStick, 8);
         //Button backButton = new JoystickButton(controlStick, 9);
         //Button startButton = new JoystickButton(controlStick, 10);
         //Button leftStickPress = new JoystickButton(controlStick, 11);
@@ -88,6 +88,8 @@ public class OI {
         xButton.whenPressed(new OperateClaw());
         leftBumper.whileHeld(new LiftUp());
         leftTrigger.whileHeld(new LiftDown());
+        rightBumper.whileHeld(new LiftMove(-.5));
+        rightTrigger.whileHeld(new LiftMove(.25));
         
         //Drive Stick buttons
         //Uncomment any button to open it for binding

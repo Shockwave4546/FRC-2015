@@ -34,6 +34,14 @@ public class Lift extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     
+    public void move(double speed)	{
+    	
+    	if (isFullyUp() == false || isFullyDown() == false)	{
+    		
+    		motor.set(speed);
+    	}
+    }
+    
     //Method to raise the lift
     public void  up()	{
     	
