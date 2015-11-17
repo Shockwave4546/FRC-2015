@@ -120,12 +120,14 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putNumber("Speed %", Robot.speed*100);
+
         SmartDashboard.putBoolean("Claw Status", Robot.claw.isClosed());
         SmartDashboard.putBoolean("Lift Fully Up", Robot.lift.isFullyUp());
         SmartDashboard.putBoolean("Lift Fully Down", Robot.lift.isFullyDown());
         SmartDashboard.putBoolean("Gyro Connected?", Robot.drivetrain.isGyroConnected());
         SmartDashboard.putBoolean("Gyro Calibrating?", Robot.drivetrain.isGyroCalibrating());
+        
+        SmartDashboard.putNumber("Speed %", Robot.speed*100);
         SmartDashboard.putNumber("Gyro Angle", Robot.drivetrain.getAngle());
         
         SmartDashboard.putData(drivetrain);
