@@ -37,7 +37,7 @@ public class RobotMap {
     public static DigitalInput liftLowerLimit;
     public static DigitalInput liftToteLimit;
     public static PowerDistributionPanel pdp;
-    public static AHRS gyro;
+    public static AHRS drivetrainGyro;
 
     public static void init() {
 
@@ -56,6 +56,8 @@ public class RobotMap {
         
         drivetrainChassis = new RobotDrive(drivetrainfrontLeft, drivetrainrearLeft,
               drivetrainfrontRight, drivetrainrearRight);
+        
+        drivetrainGyro = new AHRS(SPI.Port.kMXP);
         
         //Drivetrain configuration
         drivetrainChassis.setSafetyEnabled(true);

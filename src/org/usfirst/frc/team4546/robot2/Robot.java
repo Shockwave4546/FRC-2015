@@ -59,7 +59,6 @@ public class Robot extends IterativeRobot {
         lift = new Lift();
         claw = new Claw();
         pdp = RobotMap.pdp;
-        gyro = RobotMap.gyro;
         speed = 1;
         // OI must be constructed after subsystems. If the OI creates Commands 
         //(which it very likely will), subsystems are not guaranteed to be 
@@ -125,6 +124,9 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putBoolean("Claw Status", Robot.claw.isClosed());
         SmartDashboard.putBoolean("Lift Fully Up", Robot.lift.isFullyUp());
         SmartDashboard.putBoolean("Lift Fully Down", Robot.lift.isFullyDown());
+        SmartDashboard.putBoolean("Gyro Connected?", Robot.drivetrain.isGyroConnected());
+        SmartDashboard.putBoolean("Gyro Calibrating?", Robot.drivetrain.isGyroCalibrating());
+        SmartDashboard.putNumber("Gyro Angle", Robot.drivetrain.getAngle());
         
         SmartDashboard.putData(drivetrain);
         SmartDashboard.putData(lift);
