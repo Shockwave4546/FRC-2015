@@ -34,6 +34,7 @@ public class Drivetrain extends Subsystem {
     Talon rearRight = RobotMap.drivetrainrearRight;
     RobotDrive chassis = RobotMap.drivetrainChassis;
     AHRS gyro = RobotMap.drivetrainGyro;
+    
     double currentDrive = 0;
     double rampedDrive = 0;
 
@@ -59,7 +60,6 @@ public class Drivetrain extends Subsystem {
 	public void mecanumDrive(double x, double y, double z, double angle, double speed)	{
 		chassis.mecanumDrive_Cartesian(x*speed, y*speed, z*speed, angle);
 	}
-	
 	
 	public double ramp(double value, double rate)	{
 		
@@ -102,6 +102,11 @@ public class Drivetrain extends Subsystem {
 	public void driveStop()	{
 		
 		chassis.drive(0,0);
+	}
+	
+	public AHRS getGyro(){
+		
+		return gyro;
 	}
 	
 	//Make this return false to disable autonomous
