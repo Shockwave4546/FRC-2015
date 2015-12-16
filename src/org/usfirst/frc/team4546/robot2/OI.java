@@ -12,6 +12,7 @@
 package org.usfirst.frc.team4546.robot2;
 
 import org.usfirst.frc.team4546.robot2.commands.*;
+import org.usfirst.frc.team4546.robot2.triggers.*;
 
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -107,10 +108,19 @@ public class OI {
         //Button elevenButton = new JoystickButton(driveStick, 11);
         //Button twelveButton = new JoystickButton(driveStick, 12);
         
+        POVButton driveUp = new POVButton(driveStick, 0, 0);
+        POVButton driveRight = new POVButton(driveStick, 0, 90);
+        POVButton driveDown = new POVButton(driveStick, 0, 180);
+        POVButton driveLeft = new POVButton(driveStick, 0, 270);
+        
         //Drive Stick commands
         //Comment any of these out to remove them
         
         trigger.whenPressed(new Brake());
+        driveUp.whenActive(new TurnToAngle(0));
+        driveRight.whenActive(new TurnToAngle(90));
+        driveDown.whenActive(new TurnToAngle(180));
+        driveLeft.whenActive(new TurnToAngle(270));
         
     }
     

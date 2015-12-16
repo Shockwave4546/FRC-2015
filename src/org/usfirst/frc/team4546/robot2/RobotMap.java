@@ -58,6 +58,7 @@ public class RobotMap {
               drivetrainfrontRight, drivetrainrearRight);
         
         drivetrainGyro = new AHRS(SPI.Port.kMXP);
+        LiveWindow.addSensor("Drivetrain", "Gyro", drivetrainGyro);
         
         //Drivetrain configuration
         drivetrainChassis.setSafetyEnabled(true);

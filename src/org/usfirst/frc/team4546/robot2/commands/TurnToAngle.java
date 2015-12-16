@@ -6,7 +6,7 @@ import org.usfirst.frc.team4546.robot2.*;
 
 public class TurnToAngle extends PIDCommand	{
 	
-	static double p = 0.03;
+	static double p = 0.01;
 	static double i = 0;
 	static double d = 0;
 	static double tolerance = 2.0f;
@@ -20,6 +20,8 @@ public class TurnToAngle extends PIDCommand	{
 		getPIDController().setOutputRange(-1.0, 1.0);
 		getPIDController().setAbsoluteTolerance(tolerance);
 		getPIDController().setContinuous(true);
+		
+		requires(Robot.drivetrain);
 		
 		this.angle = angle;
 		
