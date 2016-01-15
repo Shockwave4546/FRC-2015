@@ -116,7 +116,7 @@ public class OI {
         //Drive Stick commands
         //Comment any of these out to remove them
         
-        trigger.whenPressed(new Brake());
+        trigger.whenPressed(new Drive());
         driveUp.whenActive(new TurnToAngle(0));
         driveRight.whenActive(new TurnToAngle(90));
         driveDown.whenActive(new TurnToAngle(180));

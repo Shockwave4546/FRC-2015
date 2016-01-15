@@ -98,6 +98,11 @@ public class Drivetrain extends Subsystem {
 		return gyro.isCalibrating();
 	}
 	
+	public void zeroYaw()	{
+		
+		gyro.zeroYaw();
+	}
+	
 	//Method for stopping the robot
 	public void driveStop()	{
 		

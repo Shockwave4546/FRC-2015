@@ -43,7 +43,7 @@ public class TurnToAngle extends PIDCommand	{
 
 	protected void execute() {
 
-		Robot.drivetrain.mecanumDrive(0, 0, turnRate, Robot.drivetrain.getAngle(), 1);
+		Robot.drivetrain.mecanumDrive(0, 0, turnRate, Robot.drivetrain.getAngle(), Robot.speed);
 	}
 
 	protected boolean isFinished() {
@@ -52,7 +52,7 @@ public class TurnToAngle extends PIDCommand	{
 	}
 
 	protected void end() {
-		
+		cancel();
 		
 	}
 

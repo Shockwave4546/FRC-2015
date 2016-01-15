@@ -22,6 +22,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.CameraServer;
 
 import org.usfirst.frc.team4546.robot2.commands.*;
 import org.usfirst.frc.team4546.robot2.subsystems.*;
@@ -37,6 +38,7 @@ public class Robot extends IterativeRobot {
 
     Command autonomousCommand;
     SendableChooser autoChooser;
+    //CameraServer camera;
     
     public static OI oi;
     public static Drivetrain drivetrain;
@@ -66,6 +68,10 @@ public class Robot extends IterativeRobot {
         // pointers. Bad news. Don't move it.
         oi = new OI();
         pdp.clearStickyFaults();
+        
+        //camera = CameraServer.getInstance();
+        //camera.setQuality(50);
+        //camera.startAutomaticCapture("cam0");
 
         autoChooser = new SendableChooser();
         autoChooser.addDefault("No Auto", null);
